@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM022PRestApi.Views.CreateAlumPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Image x:Name="Foto" BackgroundColor="DarkKhaki" WidthRequest="100" HeightRequest="170"/>
+
+            <Button x:Name="btnfoto" Text="Foto Alumno" Clicked="btnfoto_Clicked" VerticalOptions="Center" />
+
+            <Label Text="Nombre" />
+            <Entry Keyboard="Text" 
+                   Placeholder="Ingrese Nombres"
+                   x:Name="nombres" />
+
+            <Label Text="Apellidos" />
+            <Entry Keyboard="Text" 
+                   Placeholder="Ingrese Apellidos"
+                   x:Name="apelllidos" />
+
+            <Label Text="Direccion" />
+            <Entry Keyboard="Text" 
+                   Placeholder="Ingrese Direccion del alumno"
+                   x:Name="direccion" />
+
+            <Label Text="Edad" />
+            <Entry Keyboard="Text" 
+                   Placeholder="Ingrese edad del alumno"
+                   x:Name="edad" />
+
+            <Picker Title="Seleccione Sexo" TitleColor="Black" x:Name="sexo">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>M</x:String>
+                        <x:String>F</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker Title="Seleccione carrera" TitleColor="Black" x:Name="idcarrera">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>01</x:String>
+                        <x:String>02</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button x:Name="btncreate" Text="Crear Alumno" Clicked="btncreate_Clicked" BackgroundColor="CadetBlue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
